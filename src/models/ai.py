@@ -12,7 +12,7 @@ class AIModel(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(100), unique=True)
     description: Mapped[str]
-    shor_description: Mapped[str]
+    short_description: Mapped[str]
     icon: Mapped[str] = mapped_column(default=str(image_to_byte_array(DEFAULT_IMG)))
     category_id: Mapped[int] = mapped_column(
         ForeignKey("category.id", ondelete="CASCADE"))

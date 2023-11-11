@@ -11,7 +11,7 @@ class UserModel(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     login: Mapped[str] = mapped_column(String(50), unique=True)
-    email: Mapped[str] = mapped_column(String(50))
+    email: Mapped[str] = mapped_column(String(50), unique=True)
     password: Mapped[str] = mapped_column(String(25))
     user_image: Mapped[str] = mapped_column(default=str(image_to_byte_array(DEFAULT_IMG)))
 

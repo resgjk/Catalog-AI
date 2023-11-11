@@ -15,3 +15,13 @@ class UserLogin(BaseModel):
 class UserPhoto(BaseModel):
     user_id: int
     photo_bytes: str
+
+
+class AiQuery(BaseModel):
+    ai_title: str
+    query_text: str
+
+
+class UserAi(BaseModel):
+    user_id: int
+    ai_id: int
