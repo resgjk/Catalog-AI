@@ -7,9 +7,9 @@ import uvicorn
 from db.database import create_tables
 from router import router
 
-app = FastAPI()
+app = FastAPI(title="Catalog-AI")
 
-origins = ["127.0.0.1:8000"]
+origins = ["127.0.0.1:8080"]
 
 app.add_middleware(
     CORSMiddleware,

@@ -10,4 +10,4 @@ class UserAIModel(Base):
     ai_id: Mapped[int] = mapped_column(primary_key=True)
 
     def __repr__(self):
-        return f"{self.user_id=} {self.ai_id=}"
+        return f"{self.user_id} {self.ai_id}"
