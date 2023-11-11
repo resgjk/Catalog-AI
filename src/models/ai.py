@@ -11,7 +11,7 @@ class AIModel(Base):
     title: Mapped[str] = mapped_column(String(100), unique=True)
     description: Mapped[str]
     shor_description: Mapped[str]
-    icon: Mapped[bytes] = mapped_column(LargeBinary())
+    icon: Mapped[str] = mapped_column(default=str(image_to_byte_array()))
     category_id: Mapped[int] = mapped_column(
         ForeignKey("category.id", ondelete="CASCADE"))
 

@@ -9,7 +9,7 @@ class CategoryModel(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str]
-    icon: Mapped[bytes] = mapped_column(LargeBinary())
+    icon: Mapped[str] = mapped_column(default=str(image_to_byte_array()))
 
     def __repr__(self):
         return f"{self.id=} {self.title=}"

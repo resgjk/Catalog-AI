@@ -6,6 +6,6 @@ from PIL import Image
 def image_to_byte_array():
     image = Image.open("default.png")
     imgByteArr = BytesIO()
-    image.save(imgByteArr, format=image.format)
+    image.save(imgByteArr, format="png")
     imgByteArr = imgByteArr.getvalue()
-    return str(imgByteArr)
+    return imgByteArr
