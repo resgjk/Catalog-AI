@@ -1,10 +1,9 @@
 import re
 
 import bcrypt
-from fastapi import APIRouter, Body, Depends
+from fastapi import APIRouter, Body
 from sqlalchemy import delete, select, insert, update, and_
 from sqlalchemy.exc import NoResultFound
-from pydantic import BaseModel
 
 from db.database import async_session_maker
 from models.ai import AIModel
