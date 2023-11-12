@@ -70,7 +70,7 @@ async def get_ai_by_categories(category: int):
 @router.post("/ai/query")
 async def post_query(query: AiQuery = Body()):
     result = await query_ai(**dict(query))
-    return result
+    return {"response": result}
 
 
 @router.post("/user/register")
