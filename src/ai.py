@@ -1,7 +1,7 @@
 import g4f
 
 PROVIDER = {
-    "gpt-3.5-turbo": g4f.Provider.Liaobots,
+    "gpt-3.5-turbo": g4f.Provider.GPTalk,
     "gpt-4": g4f.Provider.Liaobots,
     
 }
