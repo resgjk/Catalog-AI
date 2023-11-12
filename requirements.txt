@@ -1,6 +1,7 @@
 aiosqlite
 bcrypt
 fastapi
+g4f
 Pillow
 python-dotenv
 SQLAlchemy
